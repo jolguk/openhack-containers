@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
     - name: poi
-      image: poi:1.0
+      image: registryjkr9241.azurecr.io/tripinsights/poi:1.0
   nodeSelector:
     "beta.kubernetes.io/os": linux
