@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: my-api
@@ -19,7 +19,7 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata:registry-secret
+metadata:
   name: my-api
 spec:
   type: LoadBalancer
