@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: my-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-api
+    spec:
+      containers:
+      - name: my-api
+        image: registryjkr9241.azurecr.io/tripinsights/poi:1.0
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: registry-secret
+---
+apiVersion: v1
+kind: Service
+metadata:registry-secret
+  name: my-api
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: my-api
