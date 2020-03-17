@@ -1,4 +1,4 @@
-akind: Pod
+kind: Pod
 apiVersion: v1
 metadata:
   name: poi
