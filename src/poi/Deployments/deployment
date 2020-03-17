@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: my-api
+  name: poi
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-api
+        app: poi
     spec:
       containers:
-      - name: my-api
+      - name: poi
         image: registryjkr9241.azurecr.io/tripinsights/poi:1.0
         ports:
         - containerPort: 80
@@ -20,10 +20,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-api
+  name: poi
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: my-api
+    app: poi
