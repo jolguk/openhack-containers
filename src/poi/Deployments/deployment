@@ -22,9 +22,9 @@ spec:
          - name: SQL_DBNAME
            value: "mydrivingDB"
         ports:
-        - containerPort: 80
+         - containerPort: 80
       imagePullSecrets:
-        - name: registry-secret
+         - name: registry-secret
 ---
 apiVersion: v1
 kind: Service
