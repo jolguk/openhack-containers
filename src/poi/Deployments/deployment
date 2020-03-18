@@ -16,6 +16,15 @@ spec:
         - containerPort: 80
       imagePullSecrets:
       - name: registry-secret
+      env:
+                - name:  SQL_USER
+                  value: "sqladminjKr9241"
+                - name: SQL_PASSWORD
+                  value: "zS0ky3Ob8"
+                - name: SQL_SERVER
+                  value: "sqlserverjkr9241.database.windows.net"
+                - name: SQL_DBNAME
+                  value: "mydrivingDB"
 ---
 apiVersion: v1
 kind: Service
