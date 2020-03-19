@@ -18,8 +18,8 @@ spec:
           mountPath: /secrets
           readOnly: true
         volumes:
-      - name: test
-        flexVolume:
+        - name: test
+          flexVolume:
           driver: "azure/kv"
           secretRef:
             name: kvcreds
