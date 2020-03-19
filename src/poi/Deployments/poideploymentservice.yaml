@@ -17,7 +17,7 @@ spec:
         - name: test
           mountPath: /secrets
           readOnly: true
-      volumes:
+        volumes:
       - name: test
         flexVolume:
           driver: "azure/kv"
