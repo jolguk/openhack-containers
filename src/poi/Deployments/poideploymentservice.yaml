@@ -15,6 +15,8 @@ spec:
       containers:
       - name: poi
         image: registryjkr9241.azurecr.io/tripinsights/poi:1.0
+        ports:
+        - containerPort: 80
         volumeMounts:                                   # New
         - name: test
           mountPath: /secrets
@@ -33,8 +35,7 @@ spec:
                 resourcegroup: "teamResources"            # [REQUIRED for version < v0.0.14] the resource group of the KeyVault
                 subscriptionid: "23627e20-0bb6-49b8-bf36-1bba2cdea96a"                 # [REQUIRED for version < v0.0.14] the subscription ID of the KeyVault
                 tenantid: "d26ef59e-ceb7-4b29-a1d1-ecdb3e3da6fa"                    # [REQUIRED] the tenant ID of the KeyVault
-    ports:
-         - containerPort: 80
+    
       
 ---
 apiVersion: v1
