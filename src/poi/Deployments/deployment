@@ -2,6 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: poi
+  namespace: apinamespace
 spec:
   replicas: 1
   template:
@@ -30,6 +31,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: poi
+  namespace: apinamespace
 spec:
   type: ClusterIP
   ports:
