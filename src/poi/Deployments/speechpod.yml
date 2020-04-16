@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: speech2text
+spec:
+  nodeSelector:
+        "beta.kubernetes.io/os": linux
+  containers:
+  - name: speech2text
+    image: dryrunjo.azurecr.io/speechtotext/offline-0.1.0-amd64-en-us-preview
+    args:
+    - eula: accept
+  
